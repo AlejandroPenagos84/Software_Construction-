@@ -1,0 +1,19 @@
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Java
+target/
+*.class
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db

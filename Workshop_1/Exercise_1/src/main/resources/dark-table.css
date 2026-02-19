@@ -1,0 +1,91 @@
+ /* ── TableView base ─────────────────────────────────────────── */
+.table-view {
+    -fx-background-color: #141627;
+    -fx-border-color: #1E2140;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #0D0F1A;
+    -fx-background-radius: 10px 10px 0 0;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: #0D0F1A;
+}
+
+.table-view .column-header {
+    -fx-background-color: #0D0F1A;
+    -fx-border-color: #1E2140;
+    -fx-border-width: 0 1 1 0;
+    -fx-size: 42px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #7B7FA6;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Segoe UI Semibold', 'Segoe UI', sans-serif;
+    -fx-alignment: center-left;
+    -fx-padding: 0 0 0 8px;
+}
+
+/* ── Celdas ─────────────────────────────────────────────────── */
+.table-row-cell {
+    -fx-background-color: #141627;
+    -fx-border-color: #1E2140;
+    -fx-border-width: 0 0 1 0;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #111323;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #1E2140;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #6C63FF33;
+    -fx-border-color: #6C63FF;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell .table-cell {
+    -fx-text-fill: #EAEAEA;
+    -fx-font-size: 13px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-padding: 8px 8px 8px 16px;
+    -fx-border-color: transparent;
+    -fx-alignment: center-left;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #EAEAEA;
+}
+
+/* ── Scroll bars ─────────────────────────────────────────────── */
+.table-view .scroll-bar:vertical,
+.table-view .scroll-bar:horizontal {
+    -fx-background-color: #0D0F1A;
+}
+
+.table-view .scroll-bar:vertical .thumb,
+.table-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: #2a2d4a;
+    -fx-background-radius: 4px;
+}
+
+.table-view .scroll-bar .increment-button,
+.table-view .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+/* ── Placeholder ─────────────────────────────────────────────── */
+.table-view .placeholder .label {
+    -fx-text-fill: #7B7FA6;
+    -fx-font-size: 14px;
+}
