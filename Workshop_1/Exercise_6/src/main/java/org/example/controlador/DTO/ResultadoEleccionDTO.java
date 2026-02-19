@@ -1,6 +1,7 @@
 package org.example.controlador.DTO;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ResultadoEleccionDTO {
     private String estado;        // "GANADOR", "SEGUNDA_VUELTA", "ANULADA"
@@ -45,5 +46,11 @@ public class ResultadoEleccionDTO {
 
     public void setSegundaVuelta(List<CandidatoDTO> segundaVuelta) {
         this.segundaVuelta = segundaVuelta;
+    }
+
+    public List<String> getNombresSegundaVuelta() {
+        return segundaVuelta.stream()
+                .map(CandidatoDTO::getNombre)
+                .collect(Collectors.toList());
     }
 }

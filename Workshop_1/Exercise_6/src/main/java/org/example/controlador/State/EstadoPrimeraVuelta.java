@@ -7,6 +7,7 @@ import org.example.controlador.DTO.ResultadoEleccionDTO;
 import org.example.controlador.MenuController;
 import org.example.vista.VistaMenu;
 
+import java.util.List;
 import java.util.Map;
 
 public class EstadoPrimeraVuelta implements EstadoEleccion {
@@ -30,8 +31,9 @@ public class EstadoPrimeraVuelta implements EstadoEleccion {
                 ResultadoEleccionDTO dto = resultado.data();
                 if ("SEGUNDA_VUELTA".equals(dto.getEstado())) {
                     vista.showMessage(resultado.title(), resultado.data().getEstado() + " Candidatos: " + resultado.data().getSegundaVuelta().getFirst() + resultado.data().getSegundaVuelta().get(1));
-                    String c1 = dto.getSegundaVuelta().get(0).getNombre();
-                    String c2 = dto.getSegundaVuelta().get(1).getNombre();
+                    List<String> segundaVueltaNombres = dto.getNombresSegundaVuelta();
+                    String c1 = segundaVueltaNombres.get(0);;
+                    String c2 =segundaVueltaNombres.get(1);
 
                     controller.setEstado(new EstadoSegundaVuelta(c1, c2, new SegundaVueltaResponse(controller.getService())));
                     controller.refrescarVista();
